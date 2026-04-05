@@ -38,6 +38,19 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": {
+            "PlusJakartaSans-Regular": "./assets/fonts/PlusJakartaSans-Regular.ttf",
+            "PlusJakartaSans-Medium": "./assets/fonts/PlusJakartaSans-Medium.ttf",
+            "PlusJakartaSans-SemiBold": "./assets/fonts/PlusJakartaSans-SemiBold.ttf",
+            "PlusJakartaSans-Bold": "./assets/fonts/PlusJakartaSans-Bold.ttf",
+            "PlusJakartaSans-Light": "./assets/fonts/PlusJakartaSans-Light.ttf",
+            "PlusJakartaSans-ExtraBold": "./assets/fonts/PlusJakartaSans-ExtraBold.ttf"
+          }
+        }
       ]
     ],
     "experiments": {
