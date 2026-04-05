@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# Recurrly
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A subscription tracking app built with React Native and Expo. Keep track of all your recurring subscriptions in one place — see what you're spending, when payments are due, and stay on top of your finances.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Subscription tracking** — add and manage all your recurring subscriptions
+- **Insights** — visualize spending patterns and monthly costs at a glance
+- **Onboarding** — smooth first-run experience to get set up quickly
+- **Auth** — sign in / sign up flow
+- **Settings** — manage your account and preferences
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- [Expo](https://expo.dev) + [Expo Router](https://docs.expo.dev/router/introduction/) (file-based routing)
+- [React Native](https://reactnative.dev)
+- [NativeWind](https://www.nativewind.dev) (Tailwind CSS for React Native)
+- [React Navigation](https://reactnavigation.org)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+**Install dependencies**
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**Run the app**
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Then open in your preferred environment:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+| Platform | Command |
+|----------|---------|
+| iOS Simulator | Press `i` |
+| Android Emulator | Press `a` |
+| Physical device | Scan QR with [Expo Go](https://expo.dev/go) |
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+app/
+├── (auth)/          # Sign in & sign up screens
+├── (tabs)/          # Main tab screens
+│   ├── index.tsx        # Home / dashboard
+│   ├── subscriptions.tsx
+│   ├── subscriptions/[id].tsx
+│   ├── insights.tsx
+│   └── settings.tsx
+├── onboarding.tsx   # First-run onboarding
+└── _layout.tsx      # Root layout
+assets/
+├── fonts/           # Plus Jakarta Sans
+├── icons/           # App & service icons
+└── images/          # Brand assets
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Development
+
+This project uses file-based routing via Expo Router. Add new screens by creating files inside the `app/` directory.
+
+Styles are written with NativeWind — use Tailwind utility classes directly on React Native components via the `className` prop.
